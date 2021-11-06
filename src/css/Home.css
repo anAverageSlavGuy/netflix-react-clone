@@ -1,0 +1,201 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  height: 62.5vh;
+  padding: 70px 45px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #181818eb;
+}
+
+.main .row {
+  width: 100%;
+}
+
+.pinned-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.pinned-header .logo-img {
+  height: 2rem;
+  width: auto;
+}
+
+.row {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.genre {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 5px;
+  margin: 8px auto;
+  gap: 5px;
+  overflow: unset;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  z-index: 1;
+}
+
+.movies:hover {
+  z-index: 4 !important;
+}
+
+.movies .movies-container {
+  padding: 0 8px;
+  background: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  width: auto;
+}
+
+.movies .movie-item {
+  background-color: #aa0000;
+  border: 2px solid white;
+  width: 98%;
+  height: 166px;
+  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  border-radius: 3px;
+  z-index: 3;
+}
+
+.movies .movie-item .movie-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  border-radius: 3px;
+}
+
+.movies .movie-item .movie-card:hover {
+  -webkit-box-shadow: 0px 0px 20px 3px #000000;
+          box-shadow: 0px 0px 20px 3px #000000;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  position: relative;
+  z-index: 4;
+  background: yellow;
+}
+
+.movies .movie-item .movie-text {
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(#0000009c), to(transparent));
+  background: linear-gradient(0deg, black, #0000009c, transparent);
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+}
+
+.movies .movie-item .movie-text .title {
+  font-size: 1em;
+  font-weight: 500;
+  padding: 8px;
+}
+
+.movies .movie-item img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100%;
+     object-position: 100%;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.arrow-carousel {
+  color: white;
+  width: 5%;
+  top: 16%;
+  height: 85%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.25em;
+  z-index: 1;
+}
+
+.arrow-carousel.left {
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
+  background-image: linear-gradient(to right, black, transparent);
+}
+
+.arrow-carousel.right {
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(black));
+  background-image: linear-gradient(to right, transparent, black);
+}
+
+.react-multi-carousel-list {
+  overflow: unset;
+}
+
+.active-card {
+  z-index: 4 !important;
+}
+
+footer {
+  width: 100%;
+  height: 35vh;
+}
+/*# sourceMappingURL=Home.css.map */
