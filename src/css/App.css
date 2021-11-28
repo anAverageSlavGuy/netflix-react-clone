@@ -14,228 +14,13 @@
 
 body {
     margin: 0;
-    overflow-x: hidden;
-    background-color: var(--card-bg);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-h5 {
-    font-size: calc(14px + 2vmin);
-    margin: 1.5vh auto;
-}
-
-.App {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    background-color: var(--content-bg);
-    overflow-y: auto;
-}
-
-nav {
-    height: 5rem;
-    padding-top: 20px;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    top: 0;
-    background-color: var(--header-bg);
-    display: flex;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.header {
-    display: flex;
-    width: 100%;
-    margin: 0 3.5rem;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-top: .5rem;
-    height: auto;
-}
-
-.content-item,
-.content-item-reverse {
-    max-width: 1100px;
-    display: flex;
-    height: 100%;
-    margin: auto;
-}
-
-.content-item-reverse {
-    flex-direction: row-reverse!important;
-}
-
-.content-item-container {
-    display: flex;
-    background-color: var(--card-bg);
-    color: white;
-    padding: 70px 45px;
-    height: 35vh;
-}
-
-.hero-banner {
-    display: flex;
-    background-image: url("../images/IT-it-20211011-popsignuptwoweeks-perspective_alpha_website_large.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    height: 80vh;
-    background-color: var(--card-bg);
-    color: white;
-    padding: 70px 45px;
-}
-
-.img-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .4);
-    background-image: linear-gradient(to top, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .8) 100%);
-}
-
-.our-story-card-text {
-    position: relative;
-    width: 100%;
-    /*padding: 45px 0;*/
-    max-width: 950px;
-    margin: auto;
-    text-align: center;
-    z-index: 1;
-}
-
-.our-story-card-title {
-    font-size: 3.75em;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.25em;
-}
-
-.our-story-card-subtitle {
-    font-size: 1.625rem;
-    margin: 1rem auto;
-    font-weight: 400;
-}
-
-.email-form-title {
-    max-width: none;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-.content-item-text {
-    padding: 0 3rem 0 0;
-}
-
-.content-item-text,
-.content-item-image {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    flex: 1;
-}
-
-.content-item-image>div {
-    background-color: gray;
-    height: 90%;
-    width: 80%;
-}
-
-.content-item-text h5 {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: .5rem;
-    text-align: left;
-}
-
-.content-item-text p {
-    font-size: 1.625rem;
-    font-weight: 400;
-    text-align: left;
-}
-
-footer {
-    grid-column: 1 / 7;
-    background-color: var(--footer-bg);
-    height: 50vh;
-    border-top: 8px solid #242424;
-}
-
-.red-button {
-    background-color: var(--button-bg);
-    text-decoration: none;
-    line-height: normal;
-    padding: 7px 17px;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 3px;
-    color: white;
-    cursor: pointer;
-    border: none;
-}
-
-.our-story-cta-container {
-    margin: 10px auto;
-}
-
-.start-button {
-    margin: .25em auto;
-    font-size: 1rem;
-    height: 50px;
-    padding: 0 1em;
-    display: flex;
-    font-weight: 400;
-    align-items: center;
-    width: auto;
-}
-
-.cta-btn-txt {
-    margin-right: 10px;
-}
-
-.netflix-logo {
-    width: 10.4375rem;
-    height: 2.8125rem;
-}
-
-.content-item-image img {
-    width: 100%;
-    height: auto;
-}
-
-.email-form-body {
-    display: flex;
-    max-width: 500px;
-    margin: 10px auto;
-    width: 100%;
-}
-
-.email-input {
-    width: 100%;
-    position: relative;
-    align-items: center;
-    height: auto;
-    margin: 10px auto;
-    display: flex;
-}
-
-.email-input-field {
-    height: 48px;
-    padding: 0;
-    width: 100%;
-}
-
-.email-input>label {
-    position: absolute;
-    left: 10px;
-    color: #8c8c8c;
-    font-size: 14px;
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 
@@ -280,4 +65,280 @@ footer {
     .start-btn {
         padding: 0 1em;
     }
+}
+
+
+/* Home */
+
+.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    height: 62.5vh;
+    padding: 70px 45px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #181818eb;
+}
+
+.main .row {
+    width: 100%;
+}
+
+.pinned-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 60px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.pinned-header .logo-img {
+    height: 2rem;
+    width: auto;
+}
+
+.row {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.genre {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+.slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-gap: 5px;
+    margin: 8px auto;
+    gap: 5px;
+    overflow: unset;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+    z-index: 1;
+}
+
+.slick-track:hover {
+    z-index: 4 !important;
+}
+
+.slick-track .movies-container {
+    padding: 0 8px;
+    background: orange;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px;
+    width: auto;
+}
+
+.slick-track .movie-item {
+    background-color: #aa0000;
+    border: 2px solid white;
+    width: 98%;
+    height: 166px;
+    margin: auto;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: white;
+    border-radius: 3px;
+    z-index: 3;
+}
+
+.slick-track .movie-item .movie-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+    border-radius: 3px;
+}
+
+/* .movies .movie-item .movie-card:hover {
+    -webkit-box-shadow: 0px 0px 20px 3px #000000;
+    box-shadow: 0px 0px 20px 3px #000000;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    position: relative;
+    z-index: 4;
+    background: yellow;
+} */
+
+.slick-track .movie-item .movie-text {
+    position: absolute;
+    background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(#0000009c), to(transparent));
+    background: linear-gradient(0deg, black, #0000009c, transparent);
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+}
+
+.slick-track .movie-item .movie-text .title {
+    font-size: 1em;
+    font-weight: 500;
+    padding: 8px;
+}
+
+.slick-track .movie-item img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 100%;
+    object-position: 100%;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.arrow-carousel {
+    color: white;
+    width: 5%;
+    top: 16%;
+    height: 85%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.25em;
+    z-index: 1;
+}
+
+.slick-list {
+    overflow: visible;
+}
+
+
+.arrow-carousel.left {
+    left: 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
+    background-image: linear-gradient(to right, black, transparent);
+}
+
+.arrow-carousel.right {
+    right: 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(black));
+    background-image: linear-gradient(to right, transparent, black);
+}
+
+.react-multi-carousel-list {
+    overflow: unset;
+}
+
+.active-card {
+    z-index: 4 !important;
+}
+
+footer {
+    width: 100%;
+    height: 35vh;
+}
+
+
+/* Login */
+
+.Login {
+    display: flex;
+    background-image: url("../images/IT-it-20211011-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 80vh;
+    padding: 70px 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    grid-column: 1 / 7;
+    background-color: var(--footer-bg);
+    height: 25vh;
+    border: none;
+}
+
+.login-content {
+    height: 55vh;
+    background: rgba(0, 0, 0, .75);
+    width: 22em;
+    z-index: 1;
+    padding: 3em;
+}
+
+.login-page-title {
+    color: white;
+}
+
+.login-input-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.login-field {
+    height: 45px;
+    padding: 20px 20px 5px;
+    width: 100%;
+    font-size: 1em;
+}
+
+.login-field:focus+.placeLabel {
+    margin-bottom: 25px;
+    font-size: 60%;
+}
+
+.login-input-label input:focus~.placeLabel,
+.login-input-label input:focus~.placeLabel,
+.login-input-label input:valid~.placeLabel {
+    margin-bottom: 25px;
+    font-size: 60%;
+}
+
+.placeLabel {
+    position: absolute;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.login-button {
+    width: 100%;
+    padding: 16px;
 }

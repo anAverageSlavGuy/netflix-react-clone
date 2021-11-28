@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import AuthService from './AuthService';
-import NavBar from './NavBar';
+import {HomeNavBar} from './NavBar';
 import Footer from './Footer';
-import '../css/Login.css';
 
 class Login extends Component {
     constructor() {
@@ -10,6 +9,8 @@ class Login extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.Auth = new AuthService();
+        this.email = React.createRef();
+        this.password = React.createRef();
     }
 
     componentDidMount() {
@@ -22,29 +23,30 @@ class Login extends Component {
     }
 
     handleFormSubmit(e) {
-        e.preventDefault();
-        console.log(this.state.email, this.state.password);
+        this.props.history.replace('/home');
+        /* e.preventDefault();
+        console.log(this.email.current.value, this.password.current.value);
 
-        this.Auth.login(this.state.email, this.state.password)
+        this.Auth.login(this.email.current.value, this.password.current.value)
             .then(res => {
                 console.log(res);
                 this.props.history.replace('/home');
             })
             .catch(err => {
                 alert(err);
-            })
+            }) */
     }
 
     handleChange(e) {
-        this.setState({
+        /* this.setState({
             [e.target.name]: e.target.value,
-        });
+        }); */
     }
 
     render() {
         return (
             <div className="container">
-                <NavBar path="/login" />
+                <HomeNavBar />
                 <div className="Login">
                     <div className="login-content">
                         <div className="login-form-container">

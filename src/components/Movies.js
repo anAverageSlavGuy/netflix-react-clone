@@ -2,11 +2,14 @@ import React from 'react';
 import Movie from './Movie';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const Movies = (props) => {
 
     const fetchMovies = () => {
-        let list = props.movies.filter(movie => movie.genres.includes(props.genre)).map(filteredMovie => (
+        let list = props.movies.filter(movie => movie.genre.includes(props.genre)).map(filteredMovie => (
             <Movie key={filteredMovie.id} movie={filteredMovie} />
         ))
 
@@ -14,16 +17,34 @@ const Movies = (props) => {
     }
 
     return (
-        <Carousel
-            infinite={false}
-            centerMode={true}
-            responsive={responsive}
-            itemClass="movies">
+        <Slider {...settings}>
             {fetchMovies()}
-        </Carousel>
+        </Slider>
 
     );
 };
+
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "block", background: "red" }}
+            onClick={onClick}
+        />
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "block", background: "green" }}
+            onClick={onClick}
+        />
+    );
+}
 
 const responsive = {
     desktop: {
@@ -41,6 +62,16 @@ const responsive = {
         items: 1,
         slidesToSlide: 1 // optional, default to 1.
     }
+};
+
+const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
 };
 
 export default Movies;

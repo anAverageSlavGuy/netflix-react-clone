@@ -1,201 +1,207 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.content-item,
+.content-item-reverse {
+    max-width: 1100px;
+    display: flex;
+    height: 100%;
+    margin: auto;
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  height: 62.5vh;
-  padding: 70px 45px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #181818eb;
+.content-item-reverse {
+    flex-direction: row-reverse!important;
 }
 
-.main .row {
-  width: 100%;
+.content-item-container {
+    display: flex;
+    background-color: var(--card-bg);
+    color: white;
+    padding: 70px 45px;
+    height: 35vh;
 }
 
-.pinned-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 60px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 70px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
+.hero-banner {
+    display: flex;
+    background-image: url("../images/IT-it-20211011-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 80vh;
+    background-color: var(--card-bg);
+    color: white;
+    padding: 70px 45px;
 }
 
-.pinned-header .logo-img {
-  height: 2rem;
-  width: auto;
+.img-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .8) 100%);
 }
 
-.row {
-  position: relative;
-  margin-bottom: 16px;
+.our-story-card-text {
+    position: relative;
+    width: 100%;
+    /*padding: 45px 0;*/
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+    z-index: 1;
 }
 
-.genre {
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 500;
-  padding: 8px 16px;
+.our-story-card-title {
+    font-size: 3.75em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.25em;
 }
 
-.movies {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  grid-gap: 5px;
-  margin: 8px auto;
-  gap: 5px;
-  overflow: unset;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-  z-index: 1;
+.our-story-card-subtitle {
+    font-size: 1.625rem;
+    margin: 1rem auto;
+    font-weight: 400;
 }
 
-.movies:hover {
-  z-index: 4 !important;
+.email-form-title {
+    max-width: none;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
-.movies .movies-container {
-  padding: 0 8px;
-  background: orange;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  width: auto;
+.content-item-text {
+    padding: 0 3rem 0 0;
 }
 
-.movies .movie-item {
-  background-color: #aa0000;
-  border: 2px solid white;
-  width: 98%;
-  height: 166px;
-  margin: auto;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: white;
-  border-radius: 3px;
-  z-index: 3;
+.content-item-text,
+.content-item-image {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
 }
 
-.movies .movie-item .movie-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-  border-radius: 3px;
+.content-item-image>div {
+    background-color: gray;
+    height: 90%;
+    width: 80%;
 }
 
-.movies .movie-item .movie-card:hover {
-  -webkit-box-shadow: 0px 0px 20px 3px #000000;
-          box-shadow: 0px 0px 20px 3px #000000;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  position: relative;
-  z-index: 4;
-  background: yellow;
+.content-item-text h5 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: .5rem;
+    text-align: left;
 }
 
-.movies .movie-item .movie-text {
-  position: absolute;
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(#0000009c), to(transparent));
-  background: linear-gradient(0deg, black, #0000009c, transparent);
-  bottom: 0;
-  width: 100%;
-  height: 25%;
+.content-item-text p {
+    font-size: 1.625rem;
+    font-weight: 400;
+    text-align: left;
 }
 
-.movies .movie-item .movie-text .title {
-  font-size: 1em;
-  font-weight: 500;
-  padding: 8px;
+.red-button {
+    background-color: var(--button-bg);
+    text-decoration: none;
+    line-height: normal;
+    padding: 5px 17px;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    border: none;
 }
 
-.movies .movie-item img {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 100%;
-     object-position: 100%;
-  cursor: pointer;
-  border-radius: 3px;
+.our-story-cta-container {
+    margin: 10px auto;
 }
 
-.arrow-carousel {
-  color: white;
-  width: 5%;
-  top: 16%;
-  height: 85%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  cursor: pointer;
-  font-size: 1.25em;
-  z-index: 1;
+.start-button {
+    margin: .25em auto;
+    font-size: 1rem;
+    height: 50px;
+    padding: 0 1em;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    width: auto;
 }
 
-.arrow-carousel.left {
-  left: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
-  background-image: linear-gradient(to right, black, transparent);
+.cta-btn-txt {
+    margin-right: 10px;
 }
 
-.arrow-carousel.right {
-  right: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(black));
-  background-image: linear-gradient(to right, transparent, black);
+.netflix-logo {
+    width: 10.4375rem;
+    height: 2.8125rem;
+    filter: brightness(1.2) contrast(2);
 }
 
-.react-multi-carousel-list {
-  overflow: unset;
+.content-item-image img {
+    width: 100%;
+    height: auto;
 }
 
-.active-card {
-  z-index: 4 !important;
+.email-form-body {
+    display: flex;
+    max-width: 500px;
+    margin: 10px auto;
+    width: 100%;
 }
+
+.email-input {
+    width: 100%;
+    position: relative;
+    align-items: center;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+}
+
+.email-input-field {
+    height: 48px;
+    padding: 0;
+    width: 100%;
+}
+
+.email-input>label {
+    position: absolute;
+    left: 10px;
+    color: #8c8c8c;
+    font-size: 14px;
+}
+
+nav {
+    height: 5rem;
+    padding-top: 20px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    background-color: var(--header-bg);
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    margin: 0 3.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: .5rem;
+    height: auto;
+}
+
 
 footer {
-  width: 100%;
-  height: 35vh;
+    grid-column: 1 / 7;
+    background-color: var(--footer-bg);
+    height: 50vh;
+    border-top: 8px solid #242424;
 }
-/*# sourceMappingURL=Home.css.map */
