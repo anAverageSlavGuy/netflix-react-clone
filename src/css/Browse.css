@@ -1,0 +1,157 @@
+.profile-netflix-logo {
+    width: 5.75rem;
+    height: auto;
+    filter: brightness(1.2) contrast(2);
+    margin-right: 25px;
+}
+
+nav.profile-nav {
+    height: 4.25rem;
+    padding-top: 0px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    background-image: -webkit-linear-gradient(top,rgba(0,0,0,.7) 10%,rgba(0,0,0,0));
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.profile-header {
+    display: flex;
+    width: 100%;
+    margin: 0 3.5rem;
+    align-items: center;
+    height: auto;
+}
+
+ul.nav-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-menu li {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s ease all;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-menu li:hover {
+    color: lightgray;
+}
+
+li.selected {
+    font-weight: 600;
+}
+
+.profile-hero-banner {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    background-color: var(--card-bg);
+    color: white;
+}
+
+.hero-banner-info {
+    width: 34%;
+    height: 700px;
+    top: 4.25rem;
+    bottom: 35%;
+    flex-direction: column;
+    left: 3.5rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-title {
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+.banner-episode-message {
+    font-size: 1.6vw;
+    color: #fff;
+    transition: color 1s cubic-bezier(.165,.84,.44,1);
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+    margin: 1vw 0;
+    font-weight: 500;
+}
+
+.banner-description {
+    color: #fff;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    font-size: 1.4vw;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+    margin-top: 0.1vw;
+}
+
+.banner-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: 1.5vw;
+}
+
+.banner-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem!important;
+    padding-right: 2rem!important;
+    border: 0;
+    border-radius: 4px;
+    opacity: 1;
+    padding: 0.8rem;
+    word-break: break-word;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    cursor: pointer;
+}
+
+button.color-primary {
+    background-color: white;
+    color: black;
+}
+
+button.color-primary:hover {
+    background-color: rgba(255,255,255,0.75);
+}
+
+button.color-secondary {
+    background-color: rgba(109,109,110,0.7);
+    color: white;
+}
+
+button.color-secondary:hover {
+    background-color: rgba(109,109,110,0.4);
+}
+
+.banner-buttons span {
+    display: block;
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2.4rem;
+}
+
+.banner-button-icon {
+    height: 2rem!important;
+    width: 2rem!important;
+}
