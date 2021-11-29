@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from './../images/Netflix_2015_logo.svg';
 import { Link } from "react-router-dom";
 
@@ -16,8 +16,26 @@ export function HomeNavBar(props) {
 }
 
 export function ProfileNavBar(props) {
+    const [show, handleShow] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", transitionNavBar);
+        return () => {
+            window.removeEventListener("scroll", transitionNavBar);
+        }
+    }, [])
+
+    const transitionNavBar = () => {
+        if(window.scrollY > 100){
+            handleShow(true);
+        } else {
+            handleShow(false);
+        }
+    }
+
+
     return (
-        <nav className="profile-nav">
+        <nav className={`profile-nav ${show && "dark-nav"}`}>
             <div className="profile-header">
                 <div className="profile-nav-logo">
                     <Link to="/"><img src={Logo} className="profile-netflix-logo" alt="logo" /></Link>

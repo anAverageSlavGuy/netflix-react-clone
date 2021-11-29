@@ -38,7 +38,7 @@ function Row({ title, fetchUrl }) {
                 transitionDuration={500}
                 containerClass="carousel-container movie-row-items"
                 removeArrowOnDeviceType={["tablet", "mobile"]}
-                itemClass="movie-item-container"
+                itemClass="movie-item"
             >
                 {movies.map((movie) => {
                     return <Movie key={movie.id} movie={movie} />
@@ -57,8 +57,8 @@ const responsive = {
     },
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 5,
-        slidesToSlide: 5
+        items: 6,
+        slidesToSlide: 6
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
