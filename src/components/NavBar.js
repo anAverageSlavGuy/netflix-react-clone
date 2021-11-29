@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Logo from './../images/Netflix_2015_logo.svg';
 import { Link } from "react-router-dom";
 

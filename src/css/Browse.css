@@ -155,3 +155,57 @@ button.color-secondary:hover {
     height: 2rem!important;
     width: 2rem!important;
 }
+
+.movie-rows {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3.5rem;
+    z-index: 100;
+    margin-top: -20vh;
+    overflow-x: hidden;
+    background: black;
+}
+
+.movie-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.movie-row-title {
+    color: white;
+    z-index: 100;
+    padding: 0.5rem 0;
+}
+
+.movie-row-items {
+    display: flex;
+    gap: 8px;
+}
+
+.movie-poster {
+    width: 100%;
+    height: auto;
+    max-height: 162px;
+}
+
+.movie-card {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-text {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    color: white;
+}
+
+.movie-item {
+    padding-right: 8px;
+}
