@@ -7,7 +7,7 @@
 }
 
 .content-item-reverse {
-    flex-direction: row-reverse!important;
+    flex-direction: row-reverse !important;
 }
 
 .content-item-container {
@@ -15,7 +15,8 @@
     background-color: var(--card-bg);
     color: white;
     padding: 70px 45px;
-    height: 35vh;
+    height: 50vh;
+    border-bottom: 8px solid #222;
 }
 
 .hero-banner {
@@ -29,6 +30,7 @@
     background-color: var(--card-bg);
     color: white;
     padding: 70px 45px;
+    border-bottom: 8px solid #222;
 }
 
 .img-gradient {
@@ -92,8 +94,8 @@
 
 .content-item-text h5 {
     font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: .5rem;
+    line-height: 3rem;
+    margin-bottom: 1.25rem;
     text-align: left;
 }
 
@@ -103,17 +105,96 @@
     text-align: left;
 }
 
+.button-group {
+    display: flex;
+}
+
+.lang-select {
+    margin: auto 2rem;
+    padding: 7px 13px;
+    font-weight: 400;
+    border-radius: 3px;
+    color: white;
+    background: rgba(0, 0, 0, .4);
+    border: 1px solid #aaa;
+}
+
 .red-button {
     background-color: var(--button-bg);
     text-decoration: none;
     line-height: normal;
-    padding: 5px 17px;
+    padding: 7px 19px;
     font-weight: 400;
     font-size: 1rem;
     border-radius: 3px;
     color: white;
     cursor: pointer;
     border: none;
+}
+
+.faqs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg);
+    color: white;
+    padding: 70px 45px;
+    border-bottom: 8px solid #222;
+}
+
+.faqs-container>h5 {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.faqs-dropdowns {
+    width: 45%;
+    margin: 2em auto;
+}
+
+.faq-question {
+    padding: 1.25rem 1.25rem;
+    font-weight: 400;
+    position: relative;
+    width: 100%;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 0;
+    background: #303030;
+}
+
+.faq-question-title {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+
+.faq-question > button {
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.ReactCollapse--collapse {
+    transition: 0.3s ease all;
+    background: #303030;
+    margin-top: 1px;
+    margin-bottom: 7px;
+}
+
+.ReactCollapse--content {
+    padding: 1.25rem;
+    margin-bottom: 7px;
+    font-size: 1.5rem;
 }
 
 .our-story-cta-container {
@@ -176,8 +257,7 @@
 }
 
 nav {
-    height: 5rem;
-    padding-top: 20px;
+    height: 6.25rem;
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -186,6 +266,7 @@ nav {
     display: flex;
     font-size: calc(10px + 2vmin);
     color: white;
+    align-items: center;
 }
 
 .header {
@@ -193,8 +274,7 @@ nav {
     width: 100%;
     margin: 0 3.5rem;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-top: .5rem;
+    align-items: center;
     height: auto;
 }
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import {HomeNavBar} from './NavBar';
+import { HomeNavBar } from './NavBar';
 import Footer from './Footer';
 import Content from './Content';
+import Faq from './Faq';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import '../css/Home.css';
@@ -47,6 +48,7 @@ function Home() {
                         );
                     })}
                 </div>
+                <Faq />
             </div>
             <Footer />
         </div>
